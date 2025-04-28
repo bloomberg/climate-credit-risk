@@ -1,11 +1,5 @@
-# Open Source Project Template
-
-[![Release](https://img.shields.io/github/v/release/bloomberg/oss-template?display_name=tag)](CHANGELOG.md)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/bloomberg/oss-template/badge)](https://scorecard.dev/viewer/?uri=github.com/bloomberg/oss-template)
-[![Lint](https://github.com/bloomberg/oss-template/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/marketplace/actions/super-linter)
-[![Contributor-Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-fbab2c.svg)](CODE_OF_CONDUCT.md)
-
-## Before You Start
+<!--
+Before You Start
 
 As much as possible, we have tried to provide enough tooling to get you up and
 running quickly and with a minimum of effort. This includes sane defaults for
@@ -23,12 +17,6 @@ some things that were omitted out of necessity and others that need a little
 tweaking. Before you begin developing in earnest, there are a few changes that
 need to be made:
 
-- [ ] ✅ Select an [OSI-approved license](https://opensource.org/licenses) for
-  your project. This can easily be achieved through the 'Add File' button on the
-  GitHub UI, naming the file `LICENSE`, and selecting your desired license from
-  the provided list.
-- [ ] Update the `<License name>` placeholder in this file to reflect the name
-  of the license you selected above.
 - [ ] Replace `<INSERT_CONTACT_METHOD>` in
   [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) with a suitable communication
   channel.
@@ -62,83 +50,47 @@ need to be made:
   We encourage you to [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 - [ ] Configure [`.github/dependabot.yml`](.github/dependabot.yml) for your project's
   language and tooling dependencies.
-- [ ] In [`.github/settings.yml`](.github/settings.yml), update the following fields:
-  - [ ] `name`: Replace with the repository name for your project
-  - [ ] `description`: A short, 1-2 sentence description of your project
-  - [ ] `teams`: Uncomment and update the GitHub team names and permissions as appropriate
-  - [ ] `branches`: Uncomment and enable branch protection settings for your
-    project _(please **do not** disable branch protection entirely!)_
-- [ ] Replace the generic content in this file with the relevant details about
-  your project.
 - [ ] 🚨 Delete this section of the `README`!
+-->
+# An Efficient SSP-based Methodology for Assessing Climate Risks of a Large Credit Portfolio
 
-## About The Project
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/bloomberg/climate-credit-risk/badge)](https://scorecard.dev/viewer/?uri=github.com/bloomberg/climate-credit-risk)
+[![Lint](https://github.com/bloomberg/climate-credit-risk/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/marketplace/actions/super-linter)
+[![Contributor-Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-fbab2c.svg)](CODE_OF_CONDUCT.md)
 
-Provide some information about what the project is/does.
+This repository contains the code to reproduce the results of the [paper](https://hal.science/hal-04665712/document).
 
-## Getting Started
+## Installation
 
-To get a local copy up and running follow these simple steps.
+To set up the environment and install dependencies, follow these steps:
 
-### Prerequisites
+1. Create a virtual environment:
 
-This is an example of how to list things you need to use the software and how to
-install them.
-
-- npm
-
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repository
-
-   ```sh
-   git clone https://github.com/org_name/repo_name.git
+   ```bash
+   python -m venv .venv
    ```
 
-2. Install npm packages
+2. Activate the virtual environment:
 
-   ```sh
-   npm install
+    ```bash
+    source .venv/bin/activate
+    ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pip install .
    ```
 
-## Usage
+After setting up the environment, you can run the scripts and notebooks in this repository to reproduce the results presented in the paper.
 
-Use this space to show useful examples of how a project can be used. Additional
-screenshots, code examples and demos work well in this space. You may also link
-to more resources.
+## Repository Structure
 
-_For more examples, please refer to the [Documentation](https://example.com) or
-the [Wiki](https://github.com/org_name/repo_name/wiki)_
-
-## Roadmap
-
-See the [open issues](https://github.com/org_name/repo_name/issues) for a list
-of proposed features (and known issues).
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to
-learn, inspire, and create. Any contributions you make are **greatly
-appreciated**. For detailed contributing guidelines, please see
-[CONTRIBUTING.md](CONTRIBUTING.md)
+- **`firm.py`**: Contains the `Firm` class, which models a single firm's optimal carbon emission strategy.
+- **`portfolio.ipynb`**: Jupyter Notebook for analyzing and visualizing the climate risks of a credit portfolio.
+- **`utils.py`**: Utility functions and constants used across the project.
 
 ## License
 
-Distributed under the `<License name>` License. See [LICENSE](LICENSE) for more
+Distributed under the `Apache-2.0` license. See [LICENSE](LICENSE) for more
 information.
-
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link:
-[https://github.com/org_name/repo_name](https://github.com/org_name/repo_name)
-
-## Acknowledgements
-
-This template was adapted from
-[https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template).

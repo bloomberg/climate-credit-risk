@@ -1,0 +1,21 @@
+[project]
+name = "climate-credit-risk-os"
+version = "0.1.0"
+authors = [{ name = "Florian Bourgey", email = "fbourgey@bloomberg.net" }]
+description = "Code for the paper 'An Efficient SSP-based Methodology for Assessing Climate Risks of a Large Credit Portfolio'"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "ipython>=9.1.0",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.2",
+    "pandas>=2.2.3",
+    "scipy>=1.15.1",
+    "seaborn>=0.13.2",
+    "tqdm>=4.67.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
