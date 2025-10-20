@@ -28,7 +28,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: 🧹 run superlinter
-        uses: super-linter/super-linter@4e8a7c2bf106c4c766c816b35ec612638dc9b6b2 # v7.3.0
+        uses: super-linter/super-linter@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2 # v8.2.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: ".github/linters"
